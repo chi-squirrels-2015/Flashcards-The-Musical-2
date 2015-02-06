@@ -1,4 +1,19 @@
 <div class="container">
-  <p>Flashcards the Musical 2</p>
-  This is the main page with the decks listed
+  <div id="login_register">
+    <a href="/users/new">Register</a>
+    <a href="/users/login">Login</a>
+  </div>
+  <div id="logo">
+    <p>Flashcards The Musical 2: The SQL - Electric Bugaloo</p>
+  </div>
+  <br>
+  <!--Here we will have all of the deck links displayed-->
+  <% @decks.each do |deck| %>
+    <a href="/decks/#{deck.id}"><% deck.deck_name %></a>
+    <p><% deck.description %></p>
+    <br>
+  <% end %>
 </div>
+
+
+<!--Variables we will need: @decks which is a list of all the Deck objects-->

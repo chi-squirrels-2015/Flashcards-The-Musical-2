@@ -1,1 +1,6 @@
-This should route back to form and be the method for adding a new user
+<div class="container">
+  <h1>Create Account</h1>
+  <form action="/users" method="POST">
+    <%= erb :"users/_form", locals: { user: @user } %>
+  </form>
+</div>

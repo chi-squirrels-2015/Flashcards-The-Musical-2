@@ -1,0 +1,8 @@
+<div class="container">
+  <h1>Create Account</h1>
+  <form action="/users/login" method="POST">
+    <%= erb :"users/_form", locals: { user: @user } %>
+  </form>
+</div>
+
+<!--This is functionally equivalent to the new.erb page, but routes back to /users/login-->
