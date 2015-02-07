@@ -1,7 +1,19 @@
+get '/decks/new' do
+  erb :"decks/new"
+end
+
+post '/decks' do
+  new_deck = Deck.create(deck_name: params[:deck_name],
+                         description: params[:description],
+                         creator_id: params[:user_id])
+#Creator_id is gonna have be implemented once we get authentication up and working
+  redirect "/"
+end
+
 get '/decks/:deck_id/cards/:id' do
   @deck = Deck.find(params[:deck_id])
-  @card = @deck.draw_card
-  
+  @card = @deck.cards.sample
+
   erb :'/cards/show'
 end
 
@@ -13,6 +25,6 @@ post '/decks/:deck_id/cards/:id' do
     Card.find(params[:id]).destroy
   end
 
-  @card = @deck.draw_card
+  @card = @deck.cards.sample
   redirect "/decks/#{@deck.id}/cards/#{@card.id}"
 end

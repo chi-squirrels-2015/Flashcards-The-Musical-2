@@ -7,6 +7,8 @@
   </div>
   <br>
   <!--Here we will have all of the deck links displayed-->
+  <a id="create_deck" href="/decks/new">Create Your Own!</a><br>
+  <br>
   <% @decks.each do |deck| %>
     <a href="/decks/<%= deck.id %>/cards/1"><%= deck.deck_name %></a>
     <p><%= deck.description %></p>
