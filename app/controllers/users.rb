@@ -1,4 +1,5 @@
 get '/users' do
+  User.all
 end
 
 get '/users/new' do
@@ -12,3 +13,7 @@ end
 get '/users/:id' do
   erb :"users/show"
 end
+
+# get '/users/login' do
+#   erb :"users/login"
+# end

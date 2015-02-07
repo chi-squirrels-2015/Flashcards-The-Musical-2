@@ -9,8 +9,8 @@
   <br>
   <!--Here we will have all of the deck links displayed-->
   <% @decks.each do |deck| %>
-    <a href="/decks/#{deck.id}"><% deck.deck_name %></a>
-    <p><% deck.description %></p>
+    <a href="/decks/<%= deck.id %>/cards/1"><%= deck.deck_name %></a>
+    <p><%= deck.description %></p>
     <br>
   <% end %>
 </div>

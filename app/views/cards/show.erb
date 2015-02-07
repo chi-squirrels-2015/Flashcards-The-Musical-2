@@ -3,8 +3,10 @@
   <h1><%= @card.content %></h1>
     <br>
     <br>
-  <input id="Answer" type="text" name="answer" placeholder="Your Answer Here.">
-  <input type="submit" value="Submit!" />
+    <form action="/decks/<%= @deck.id %>/cards/<%= @card.id %>" method="POST">
+      <input id="Answer" type="text" name="answer" placeholder="Your Answer Here.">
+      <input type="submit" value="Submit!" />
+    </form>
 </div>
 
 <!--This page should take in the current Card object, randomly chosen from the Deck, in the form of @card.-->
