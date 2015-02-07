@@ -1,6 +1,9 @@
+![schema](schema.png)
+
+```xml
 <?xml version="1.0" encoding="utf-8" ?>
 <!-- SQL XML created by WWW SQL Designer, http://code.google.com/p/wwwsqldesigner/ -->
-<!-- Active URL: https://socrates.devbootcamp.com/sql.html -->
+<!-- Active URL: https://socrates.devbootcamp.com/sql -->
 <sql>
 <datatypes db="mysql">
   <group label="Numeric" color="rgb(238,238,170)">
@@ -32,29 +35,33 @@
     <type label="SET" length="1" sql="SET" quote=""/>
     <type label="Bit" length="0" sql="bit" quote=""/>
   </group>
-</datatypes><table x="600" y="294" name="decks">
+</datatypes><table x="555" y="368" name="decks">
 <row name="id" null="1" autoincrement="1">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
+<row name="creator_id" null="1" autoincrement="0">
+<datatype>INTEGER</datatype>
+<default>NULL</default><relation table="users" row="id" />
+</row>
 <row name="deck_name" null="1" autoincrement="0">
 <datatype>MEDIUMTEXT</datatype>
 <default>NULL</default></row>
 <row name="description" null="1" autoincrement="0">
 <datatype>MEDIUMTEXT</datatype>
 <default>NULL</default></row>
-<row name="creator_id" null="1" autoincrement="0">
-<datatype>INTEGER</datatype>
-<default>NULL</default><relation table="users" row="id" />
-</row>
 <key type="PRIMARY" name="">
 <part>id</part>
 </key>
 <comment>A collection of cards</comment>
 </table>
-<table x="1025" y="298" name="cards">
+<table x="693" y="371" name="cards">
 <row name="id" null="1" autoincrement="1">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
+<row name="deck_id" null="1" autoincrement="0">
+<datatype>INTEGER</datatype>
+<default>NULL</default><relation table="decks" row="id" />
+</row>
 <row name="solution" null="1" autoincrement="0">
 <datatype>MEDIUMTEXT</datatype>
 <default>NULL</default></row>
@@ -65,7 +72,7 @@
 <part>id</part>
 </key>
 </table>
-<table x="410" y="125" name="users">
+<table x="243" y="320" name="users">
 <row name="id" null="1" autoincrement="1">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
@@ -82,13 +89,13 @@
 <part>id</part>
 </key>
 </table>
-<table x="804" y="437" name="cards_in_decks">
+<table x="422" y="203" name="Games">
 <row name="id" null="1" autoincrement="1">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
-<row name="card_id" null="1" autoincrement="0">
+<row name="player_id" null="1" autoincrement="0">
 <datatype>INTEGER</datatype>
-<default>NULL</default><relation table="cards" row="id" />
+<default>NULL</default><relation table="users" row="id" />
 </row>
 <row name="deck_id" null="1" autoincrement="0">
 <datatype>INTEGER</datatype>
@@ -98,4 +105,21 @@
 <part>id</part>
 </key>
 </table>
+<table x="659" y="198" name="saves">
+<row name="id" null="1" autoincrement="1">
+<datatype>INTEGER</datatype>
+<default>NULL</default></row>
+<row name="game_id" null="1" autoincrement="0">
+<datatype>INTEGER</datatype>
+<default>NULL</default><relation table="Games" row="id" />
+</row>
+<row name="card_id" null="1" autoincrement="0">
+<datatype>INTEGER</datatype>
+<default>NULL</default><relation table="cards" row="id" />
+</row>
+<key type="PRIMARY" name="">
+<part>id</part>
+</key>
+</table>
 </sql>
+```

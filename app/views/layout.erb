@@ -20,12 +20,7 @@
 <body>
 
   <div class="container">
-    <% if current_user %>
-      <a href="/logout">Log Out</a>
-    <% else %>
-      <a href="/signup">Sign Up</a>
-      <a href="/login">Login</a>
-    <% end  %>
+    <%= erb :'/auth/_login' %>
   </div>
 
   <%= yield %>
