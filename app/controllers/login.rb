@@ -14,12 +14,16 @@ post '/login' do
 end
 
 get '/signup' do
-	erb :signup
+	erb :'auth/signup'
 end
 
 get '/logout' do
+	session.delete(:user_id)
+	redirect '/'
 end
 
 post '/signup' do
+	user = User.create(params[:user])
+  redirect "/users/#{user.id}"
 end
 
