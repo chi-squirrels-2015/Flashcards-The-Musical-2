@@ -1,4 +1,3 @@
-State, Capital
 Alabama, Montgomery
 Montana, Helena
 Alaska, Juneau
@@ -19,7 +18,7 @@ Florida, Tallahassee
 North Dakota,  Bismarck
 Georgia, Atlanta
 Ohio,  Columbus
-Hawaii,  Honolulu 
+Hawaii,  Honolulu
 Oklahoma,  Oklahoma City
 Idaho, Boise
 Oregon,  Salem
@@ -27,19 +26,19 @@ Illinois,  Springfield
 Pennsylvania,  Harrisburg
 Indiana, Indianapolis
 Rhode Island,  Providence
-Iowa,  Des Moines 
+Iowa,  Des Moines
 South Carolina,  Columbia
-Kansas,  Topeka 
+Kansas,  Topeka
 South Dakota,  Pierre
-Kentucky,  Frankfort 
+Kentucky,  Frankfort
 Tennessee, Nashville
-Louisiana, Baton Rouge 
+Louisiana, Baton Rouge
 Texas, Austin
-Maine, Augusta 
+Maine, Augusta
 Utah,  Salt Lake City
-Maryland,  Annapolis 
+Maryland,  Annapolis
 Vermont, Montpelier
-Massachusetts, Boston 
+Massachusetts, Boston
 Virginia,  Richmond
 Michigan,  Lansing
 Washington,  Olympia
