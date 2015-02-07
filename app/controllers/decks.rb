@@ -7,7 +7,7 @@ post '/decks' do
                          description: params[:description],
                          creator_id: params[:user_id])
 #Creator_id is gonna have be implemented once we get authentication up and working
-  redirect "decks/#{new_deck.id}/cards/new"
+  redirect "/"
 end
 
 get '/decks/:deck_id/cards/:id' do
