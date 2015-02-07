@@ -3,16 +3,11 @@ get '/decks/new' do
 end
 
 post '/decks' do
-  new_deck = @Deck.new(deck_name: params[:deck_name],
-                       description: params[:description],
-                       creator_id: params[:user_id])
-
-  if new_deck.save
-    redirect "decks/:id/cards/new"
-  else
-    @message = "A Deck by that name already exists"
-    redirect "/decks/new"
-  end
+  new_deck = Deck.create(deck_name: params[:deck_name],
+                         description: params[:description],
+                         creator_id: params[:user_id])
+#Creator_id is gonna have be implemented once we get authentication up and working
+  redirect "decks/#{new_deck.id}/cards/new"
 end
 
 get '/decks/:deck_id/cards/:id' do
