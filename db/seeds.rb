@@ -7,3 +7,4 @@ end
 
 Deck.create!( deck_name: "Name All 50 State Capitals USA Edt.", description: "Eliott's Favorite Game in the whole wide world, maybe?", creator_id: 1 )
 
+User.create(name:"Matthew",password:"123",password_confirmation:'123')

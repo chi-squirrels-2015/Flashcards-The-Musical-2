@@ -3,4 +3,4 @@ class Card < ActiveRecord::Base
 end
 
 
-cookie[:game_deck] = deck.cards
+# cookie[:game_deck] = deck.cards

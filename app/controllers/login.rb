@@ -3,7 +3,9 @@ get '/login' do
 end
 
 post '/login' do
-	user = User.where(params[:name]).try(:authenticate, params[:password])
+	name     = params[:user]["name"]
+	password = params[:user]["password"]
+	user     = User.find_by(name: name).try(:authenticate, password)
 
 	redirect "/users/#{user.id}"
 end

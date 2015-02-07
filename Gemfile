@@ -1,6 +1,5 @@
 source :rubygems
 
-gem 'bcrypt'
 
 # PostgreSQL driver
 gem 'pg'
@@ -18,6 +17,8 @@ gem 'activerecord'
 gem 'rake'
 
 gem 'shotgun'
+
+gem 'bcrypt'
 
 group :test do
   gem 'faker'
