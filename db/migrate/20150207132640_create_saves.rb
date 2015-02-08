@@ -1,4 +1,8 @@
 class CreateSaves < ActiveRecord::Migration
   def change
-  end
+  	create_table :saves do |t|
+	  	t.references :game
+	  	t.references :card
+	  end
+	end
 end
