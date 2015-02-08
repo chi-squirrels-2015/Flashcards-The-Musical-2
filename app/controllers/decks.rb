@@ -14,20 +14,18 @@ get '/decks/:deck_id/cards/:id' do
   @deck = Deck.find(params[:deck_id]).cards
 
   @card = @deck.sample
-
+  @remaining_cards = (50 - Card.all.length)
   erb :'/cards/show'
 end
 
 post '/decks/:deck_id/cards/:id' do
+  answer = Card.find(params[:id]).solution
+  @deck  = Deck.find(params[:deck_id])
 
-  
-  # answer = Card.find(params[:id]).solution
-  # @deck  = Deck.find(params[:deck_id])
-  
-  # if params[:answer] == answer
-  #   Card.find(params[:id]).destroy
-  # end
+  if params[:answer] == answer
+    Card.find(params[:id]).destroy
+  end
 
-  # @card = @deck.cards.sample
+  @card = @deck.cards.sample
   redirect "/decks/#{@deck.id}/cards/#{@card.id}"
 end

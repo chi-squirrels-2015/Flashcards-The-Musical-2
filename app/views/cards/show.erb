@@ -6,6 +6,10 @@
     <form action="/decks/<%= @deck.id %>/cards/<%= @card.id %>" method="POST">
       <input id="Answer" type="text" name="answer" placeholder="Your Answer Here.">
       <input type="submit" value="Submit!" />
+      <br>
+      <br>
+      <h2>Remaining Cards:</h2>
+       <h3><%= @remaining_cards %></h3>
     </form>
 </div>
 

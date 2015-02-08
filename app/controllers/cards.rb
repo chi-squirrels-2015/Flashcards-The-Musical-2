@@ -1,4 +1,5 @@
 get 'decks/:deck_id/cards/new' do
+
   erb :"cards/new"
 end
 
