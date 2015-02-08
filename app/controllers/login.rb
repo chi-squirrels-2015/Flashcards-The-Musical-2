@@ -23,7 +23,8 @@ get '/logout' do
 end
 
 post '/signup' do
-	user = User.create(params[:user])
+  hashed_password = BCrypt::Password.create(params[:password])
+	user = User.create!(name: params[:name], password_digest: hashed_password)
   redirect "/users/#{user.id}"
 end
 
