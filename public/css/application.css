@@ -1,5 +1,5 @@
 html {
-  background-color: #D3EAE0;
+  background-color: #F2F1F8;
 }
 
 #login_register {
@@ -7,15 +7,15 @@ html {
 }
 
 #logo {
-  color: #002616;
+  color: #0B4B46;
   font-size: 35px;
   text-decoration: underline;
   text-align: center;
 }
 
 #deck {
-  background-color: #72B095;
-  border: 4px solid #277755;
+  background-color: #FADCA2;
+  border: 3px solid #D2AE67;
   border-radius: 20px;
   padding: 5px 10px 5px 10px;
   width: 130px;
@@ -29,20 +29,20 @@ html {
 }
 
 .container {
-  background-color: #A3D0BD;
+  background-color: #95BEBC;
   font-family: "Trebuchet MS", Helvetica, sans-serif;
-  color: #002616;
+  color: #0B4B46;
   margin: 30px auto;
   width: 600px;
   padding: 10px 20px 10px 20px;
-  border: 4px solid #277755;
+  border: 4px solid #1F6461;
   border-radius: 20px;
   box-shadow: 10px 10px 5px #888888;
   text-align: center;
 }
 
 a:link {
-  color: #003E23;
+  color: #0B4B46;
   text-decoration: none;
 }
 
@@ -52,7 +52,7 @@ a:hover {
 }
 
 a:visited {
-  color: #003E23;
+  color: #0B4B46;
   text-decoration: none;
 }
 
