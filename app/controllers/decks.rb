@@ -14,7 +14,8 @@ get '/decks/:deck_id/cards/:id' do
   @deck = Deck.find(params[:deck_id]).cards
 
   @card = @deck.sample
-  @remaining_cards = (50 - Card.all.length)
+  @remaining_cards = (Card.all.length)
+  @percentage = (((50 - @remaining_cards).to_f/50) * 100).to_i
   erb :'/cards/show'
 end
 

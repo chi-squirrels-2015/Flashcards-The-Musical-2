@@ -3,13 +3,14 @@
   <h1><%= @card.content %></h1>
     <br>
     <br>
-    <form action="/decks/<%= @deck.id %>/cards/<%= @card.id %>" method="POST">
+    <!--   <form name ="card" action="/decks/<%= deck_id %>cards/<%= id %>" method="POST"> -->
       <input id="Answer" type="text" name="answer" placeholder="Your Answer Here.">
       <input type="submit" value="Submit!" />
       <br>
       <br>
       <h2>Remaining Cards:</h2>
-       <h3><%= @remaining_cards %></h3>
+      <h3><%= @remaining_cards %></h3>
+      <h2><%= @percentage %>% complete</h2>
     </form>
 </div>
 
