@@ -8,23 +8,40 @@
 
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script src="/js/application.js"></script>
-  <title>⚡️CARDS the SQL</title>
+  <title>CARDS the SQL</title>
 </head>
 <body>
 
-  <div id="logo" class="animated rubberBand">
-  <i class="fa fa-bolt fa-5x animated flash"></i>
+  <div id="logo_text_left" class="inset-text-effect">
+    Flash &nbsp;&nbsp; Cards
   </div>
+
+  <div class="absolute_center">
+  
+  <div id="auth">
+      <% if current_user %>
+      <a href="/logout"><button class="btn" type="button">"Log Out"</button></a>
+    <% else %>
+      <a href="/signup"><button class="btn" type="button">Sign Up</a>
+      <a href="/login"><button class="btn" type="button">Login</a>
+    <% end  %>
+  </div>
+
+    <div id="logo_shadow">
+    <i class="fa fa-bolt fa-6x"></i>
+    </div>
+
+    <div id="logo" class="animated rubberBand">
+    <i class="fa fa-bolt fa-5x animated flash"></i>
+    </div>
+  </div>
+
+
+
+
 
   <div class="container">
 
-
-    <% if current_user %>
-      <a href="/logout">Log Out</a>
-    <% else %>
-      <a href="/signup">Sign Up</a>
-      <a href="/login">Login</a>
-    <% end  %>
   </div>
 
   <%= yield %>
