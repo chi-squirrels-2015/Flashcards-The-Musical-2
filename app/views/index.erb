@@ -10,7 +10,8 @@
   <a id="create_deck" href="/decks/new">Create Your Own!</a><br>
   <br>
   <% @decks.each do |deck| %>
-    <a href="/decks/<%= deck.id %>/cards/1"><%= deck.deck_name %></a>
+  <!-- /games/:game_id/decks/:deck_id/cards/:id -->
+    <a href="games/<%= @game.id + 1 %>/decks/<%= deck.id %>/cards/<%= @card.id %>"><%= deck.deck_name %></a>
     <p><%= deck.description %></p>
     <br>
   <% end %>
