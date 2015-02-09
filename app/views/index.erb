@@ -2,16 +2,5 @@
 <!-- 
   <a id="create_deck" href="/decks/new">Create Your Own!</a><br>
   <br> -->
-  <% @decks.each do |deck| %>
-  <!-- /games/:game_id/decks/:deck_id/cards/:id -->
-    <a href="games/<%= @game.id + 1 %>/decks/<%= deck.id %>/cards/<%= @card.id %>">
-      <div class="card" style="background-image: url('../imgs/noisy/<%= (1..9).to_a.sample %>.png');">  
-      <%= deck.deck_name %>
-      </div>
-    </a>
-
-<!--     <p>
-      <%= deck.description %>
-    </p> -->
-  <% end %>
+home page
 </div>

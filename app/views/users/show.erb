@@ -1,3 +1,19 @@
 <div class="container">
   Profile Page, Irrelevant for Now.
 </div>
+
+<% avaiable_decks.each do |deck| %>
+	<div class="card" style="background-image: url('../imgs/noisy/<%= (1..9).to_a.sample %>.png');">
+      <%= deck.deck_name %>
+
+      <% if played_deck?(deck) %> 
+				<a href="">Resume Game</a>
+			<% else %>
+				<form action="../games/create" method="POST">
+					<input type="submit" value="Play Game"/>
+					<input type="hidden" name="deck_id" value="<%= deck.id %>"/>
+				</form>
+			<% end %>
+  </div>
+
+<% end %>

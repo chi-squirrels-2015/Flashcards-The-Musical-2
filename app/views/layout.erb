@@ -20,9 +20,12 @@
   
   <div id="auth">
       <% if current_user %>
-      <a href="/logout"><button class="btn" type="button">"Log Out"</button></a>
+        <a href="/logout">
+          <button class="btn" type="button">Log Out
+        </a>
     <% else %>
-      <a href="/signup"><button class="btn" type="button">Sign Up</a>
+      <a href="/signup">
+        <button class="btn" type="button">Sign Up</a>
       <a href="/login"><button class="btn" type="button">Login</a>
     <% end  %>
   </div>

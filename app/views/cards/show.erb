@@ -3,7 +3,7 @@
   <h1><%= @card.content %></h1>
     <br>
     <br>
-    <form action="/decks/<%= @deck.id %>/cards/<%= @card.id %>" method="POST">
+    <form action="/games/<%= @game.id %>/cards/<%= @card.id %>" method="POST">
       <input id="Answer" type="text" name="guess" placeholder="Your Answer Here.">
       <input type="submit" value="Submit!" />
     </form>
